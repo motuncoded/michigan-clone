@@ -1,0 +1,11 @@
+.columns {
+  display: grid;
+  gap: 1rem;
+}
+
+.logo {
+  width: 40px;
+}
+.hero-image {
+  padding-top: 3rem;
+}
