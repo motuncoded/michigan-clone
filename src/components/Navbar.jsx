@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import logo from "../assets/michigan-logo.png";
-import { FaSearch } from "react-icons/fa";
+import { FaBars, FaSearch } from "react-icons/fa";
 
 const StyledContainer = styled.div`
   --max-width: 1110px;
@@ -49,7 +49,18 @@ const StyledButton = styled.button`
     color: var(--white);
     transition: all 200ms ease-in-out;
   }
-`;
+  
+`
+const StyledMenu = styled.div`
+  display: flex;
+justify-content: center;
+align-items:center;
+display:none;
+@media (max-width:50em){
+  display:block;
+}
+
+`
 
 const Navbar = () => {
   return (
@@ -58,6 +69,7 @@ const Navbar = () => {
         <StyledHeader>
           <img src={logo} className="logo" alt="Michigan-logo" />
         </StyledHeader>
+        
         <StyledNavList>
           <StyledList>
             <a href="#">Home</a>
@@ -80,6 +92,9 @@ const Navbar = () => {
 
           <StyledButton>Take a reservation</StyledButton>
         </StyledIcon>
+        <StyledMenu>
+          <FaBars/>
+        </StyledMenu>
       </StyledNavbar>
     </StyledContainer>
   );

@@ -16,7 +16,12 @@ const StyledHero = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;
+  padding: 1rem;;
   height: 90vh;
+  @media (max-width:50em){
+    grid-template-columns:1fr;
+
+  }
 `;
 const StyledHeroList = styled.div`
   display: flex;
@@ -32,8 +37,9 @@ const StyledHeading = styled.h1`
 `;
 const StyledParagraph = styled.p`
   font-size: 1rem;
-  max-width: 52ch;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
+  line-height:1.5;
+  max-width:62ch;
 `;
 const StyledButton = styled.button`
   width: 150px;
@@ -61,7 +67,7 @@ const Hero = () => {
             </StyledHeading>
             <StyledParagraph>
               Leverage growth strategies and techologies to increase
-              effectiveness, improve processes,lower costs, save time and report
+              effectiveness, improve processes, lower costs, save time and report
               increase ROI from your growth efforts{" "}
             </StyledParagraph>
             <StyledButton>Talk to an advisor</StyledButton>
