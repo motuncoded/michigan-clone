@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
-import HeroImage from "../assets/happy-looking.png";
+import AboutImage from "../assets/people-business.jpg";
 
 
  const StyledLayout = styled.div`
@@ -19,25 +19,51 @@ const StyledContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   place-items: center;
   padding: 1rem;;
-  height: 90vh;
+  height: 100vh;
   `
+const StyledLeft = styled.div`
+  width: 40px;
+    position:absolute;
+    background-color:var(--white);
+    top: 0;
+    left:-8%;
+    bottom: 0;
+opacity:.85;
+ `
   const StyledHeroList = styled.div`
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;  
-  width: 500px;
-  background-color: var(--white);
+  display:inline-block;
   position:absolute;
-  padding: 1rem;
-left: 48%;
+  width: 500px;
+  height: 300px;
+  background-color: var(--white);
+  padding: 1rem 1rem 1rem 0rem;
+left: 50%;
 
 `
+const StyledTitle= styled.div`
+   display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column; 
+`
 const StyledHeader = styled.h2`
-  font-size:1rem;
+  font-size:.85rem;
   color:var(--red);
-  padding-bottom:.5rem;
+  position:relative;
+  padding: 1rem;
+  padding-left:4rem;
+  text-transform:uppercase;
+
 &:before{
+  content:"";
+  width:50px;
+  height: 3px;
+  background-color:var(--red);
+  left: 0%;
+  top: 47%;
+  position:absolute;
+  
+  
 }
 
 `
@@ -45,13 +71,14 @@ const StyledHeader = styled.h2`
 const StyledHeading = styled.h3`
   font-size: 1.7rem;
   line-height: 1.1;
-  padding-bottom: 0.25rem;
+    padding: .5rem 0;
+
 `
 const StyledParagraph = styled.p`
-  font-size: 1rem;
-  padding: 1rem 0;
-  line-height:1.5;
-  max-width:62ch;
+  font-size: .8rem;
+  padding: .5rem 0;
+  line-height:1.2;
+  max-width:64ch;
 `
 const StyledButton = styled.button`
   width: 150px;
@@ -60,6 +87,7 @@ const StyledButton = styled.button`
   border: 2px solid var(--red);
   color: var(--white);
   padding: 0.5rem 0.5rem;
+  margin:1rem 0;
 
   &:hover {
     background-color: var(--white);
@@ -75,20 +103,22 @@ const About = () => {
     <StyledLayout>
       <StyledContainer>
         <StyledHero>
-            <img src={HeroImage} className="about-image" alt="Michigan-staff" />
+            
+            <img src={AboutImage} className="about-image" alt="Michigan-staff" />
           <StyledHeroList>
+            <StyledLeft></StyledLeft>
+            <StyledTitle>
             <StyledHeader> Who we are
             </StyledHeader>
           <StyledHeading>
-              Modern marketing 
+              Modern marketing, sales and customer service solutions.
 
             </StyledHeading>
           <StyledParagraph>
-            Leverage growth strategies and techologies to increase
-            effectiveness, improve processes, lower costs, save time and report
-            increase ROI from your growth efforts{" "}
+           We help you streamline and automate your systems and processes with marks that drives decisions get data-driven attribution reporting and a 300-degree view of your prospect and customers layers journeys.
           </StyledParagraph>
-          <StyledButton>Talk to an advisor</StyledButton>
+              <StyledButton>Talk to an advisor</StyledButton>
+              </StyledTitle>
         </StyledHeroList>
         </StyledHero>
        

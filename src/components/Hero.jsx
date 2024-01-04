@@ -3,7 +3,6 @@ import styled from "styled-components";
 import HeroImage from "../assets/happy-looking.png";
 
 const StyledLayout = styled.div`
-  background-color: var(--light-blue);
 `;
 
 const StyledContainer = styled.div`
@@ -17,7 +16,7 @@ const StyledHero = styled.div`
   grid-template-columns: 1fr 1fr;
   place-items: center;
   padding: 1rem;;
-  height: 90vh;
+  height: 100vh;
   @media (max-width:50em){
     grid-template-columns:1fr;
 

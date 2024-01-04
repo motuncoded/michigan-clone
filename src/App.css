@@ -11,3 +11,12 @@ height: 400px;
   position: relative;
   background-color: var(--white);
 }
+.left-blur{
+  width: 50px;
+position: absolute;
+top: 0;
+bottom: 0;
+opacity: .5;}
+.card-image{
+  border-radius: 1rem 1rem 0 0rem;
+}

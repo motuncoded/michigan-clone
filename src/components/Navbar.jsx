@@ -3,6 +3,15 @@ import styled from "styled-components";
 import logo from "../assets/michigan-logo.png";
 import { FaBars, FaSearch } from "react-icons/fa";
 
+const StyledLayout = styled.div`
+background-color:var(--white);
+position:fixed;
+width: 100%;
+overflow:hidden;
+top:0;
+  z-index:22;
+
+`;
 const StyledContainer = styled.div`
   --max-width: 1110px;
   --padding: 1rem;
@@ -10,11 +19,14 @@ const StyledContainer = styled.div`
   margin-inline: auto;
 `;
 const StyledNavbar = styled.div`
+
   display: flex;
   justify-content: space-between;
   align-content: center;
   padding: 1rem;
   height: 70px;
+  background-color:transparent;
+
 `;
 const StyledHeader = styled.header``;
 
@@ -64,6 +76,8 @@ display:none;
 
 const Navbar = () => {
   return (
+        <StyledLayout>
+
     <StyledContainer>
       <StyledNavbar>
         <StyledHeader>
@@ -96,7 +110,8 @@ const Navbar = () => {
           <FaBars/>
         </StyledMenu>
       </StyledNavbar>
-    </StyledContainer>
+      </StyledContainer>
+      </StyledLayout>
   );
 };
 
