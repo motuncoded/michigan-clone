@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Solution from "./components/Solution";
+import Solutions from "./components/Solutions";
+import Proven from "./components/Proven";
 
 function App() {
   return (
@@ -11,7 +13,9 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      <Solution/>
+      <Solution />
+      <Solutions />
+      <Proven />
     </>
   );
 }

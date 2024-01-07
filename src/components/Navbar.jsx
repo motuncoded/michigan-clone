@@ -4,13 +4,12 @@ import logo from "../assets/michigan-logo.png";
 import { FaBars, FaSearch } from "react-icons/fa";
 
 const StyledLayout = styled.div`
-background-color:var(--white);
-position:fixed;
-width: 100%;
-overflow:hidden;
-top:0;
-  z-index:22;
-
+  background-color: var(--white);
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  top: 0;
+  z-index: 22;
 `;
 const StyledContainer = styled.div`
   --max-width: 1110px;
@@ -19,14 +18,12 @@ const StyledContainer = styled.div`
   margin-inline: auto;
 `;
 const StyledNavbar = styled.div`
-
   display: flex;
   justify-content: space-between;
   align-content: center;
   padding: 1rem;
   height: 70px;
-  background-color:transparent;
-
+  background-color: transparent;
 `;
 const StyledHeader = styled.header``;
 
@@ -61,57 +58,54 @@ const StyledButton = styled.button`
     color: var(--white);
     transition: all 200ms ease-in-out;
   }
-  
-`
+`;
 const StyledMenu = styled.div`
   display: flex;
-justify-content: center;
-align-items:center;
-display:none;
-@media (max-width:50em){
-  display:block;
-}
-
-`
+  justify-content: center;
+  align-items: center;
+  display: none;
+  @media (max-width: 50em) {
+    display: block;
+  }
+`;
 
 const Navbar = () => {
   return (
-        <StyledLayout>
+    <StyledLayout>
+      <StyledContainer>
+        <StyledNavbar>
+          <StyledHeader>
+            <img src={logo} className="logo" alt="Michigan-logo" />
+          </StyledHeader>
 
-    <StyledContainer>
-      <StyledNavbar>
-        <StyledHeader>
-          <img src={logo} className="logo" alt="Michigan-logo" />
-        </StyledHeader>
-        
-        <StyledNavList>
-          <StyledList>
-            <a href="#">Home</a>
-          </StyledList>
-          <StyledList>
-            <a href="#">Process</a>
-          </StyledList>
-          <StyledList>
-            <a href="#">Services</a>
-          </StyledList>
-          <StyledList>
-            <a href="#">Pricing</a>
-          </StyledList>
-          <StyledList>
-            <a href="#">Blog</a>
-          </StyledList>
-        </StyledNavList>
-        <StyledIcon>
-          <FaSearch />
+          <StyledNavList>
+            <StyledList>
+              <a href="#">Home</a>
+            </StyledList>
+            <StyledList>
+              <a href="#">Process</a>
+            </StyledList>
+            <StyledList>
+              <a href="#">Services</a>
+            </StyledList>
+            <StyledList>
+              <a href="#">Pricing</a>
+            </StyledList>
+            <StyledList>
+              <a href="#">Blog</a>
+            </StyledList>
+          </StyledNavList>
+          <StyledIcon>
+            <FaSearch />
 
-          <StyledButton>Take a reservation</StyledButton>
-        </StyledIcon>
-        <StyledMenu>
-          <FaBars/>
-        </StyledMenu>
-      </StyledNavbar>
+            <StyledButton>Take a reservation</StyledButton>
+          </StyledIcon>
+          <StyledMenu>
+            <FaBars />
+          </StyledMenu>
+        </StyledNavbar>
       </StyledContainer>
-      </StyledLayout>
+    </StyledLayout>
   );
 };
 
